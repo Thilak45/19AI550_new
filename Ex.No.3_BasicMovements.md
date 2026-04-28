@@ -1,6 +1,6 @@
 # Ex.No: 3  Basic movements in Unity 
-### DATE:                                                                            
-### REGISTER NUMBER : 
+### DATE: 29-04-2026                                                                         
+### REGISTER NUMBER : 212223240172
 ### AIM: 
  To learn the basic movements translation,scaling and rotation of game objects through code.
 ### Procedure:
@@ -18,52 +18,39 @@
 ### Program 
 ```
 using UnityEngine;
-public class TransformOperations : MonoBehaviour
+
+public class script : MonoBehaviour
 {
-    public Transform object1; // Object for translation
-    public Transform object2; // Object for rotation
-    public Transform object3; // Object for scaling
+    public Transform O1;
+    public Transform O2;
+    public Transform O3;
 
-    public float moveSpeed = 2f;  // Speed of translation
-    public float rotateSpeed = 50f; // Speed of rotation
-    public float scaleSpeed = 0.5f; // Speed of scaling
+    void Start()
+    {
+        
+    }
 
+    // Update is called once per frame
     void Update()
     {
-        // Translate (Move) object1 along the X-axis- Time.deltaTime to make movement smooth across all frame rates
-        if (object1 != null)
+        if(Input.GetKeyUp(KeyCode.X))
         {
-           // object1.position += Vector3.right * moveSpeed;
-               object1.Translate(0.02f,0,0);
-
+            O1.Translate(2f, 0, 0);
         }
-
-        // Rotate object2 around the Y-axis
-        if (object2 != null)
+        if(Input.GetKeyUp(KeyCode.Y))
         {
-            //object2.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
-            //object2.Rotate(0,0.02f.0);
+            O2.Rotate(20f, 0, 0);
         }
-
-        // Scale object3 up and down
-        if (object3 != null)
+        if(Input.GetKeyUp(KeyCode.Z))
         {
-           // float scaleChange = Mathf.PingPong(Time.time * scaleSpeed, 1f) + 0.5f; // generates a value that moves back and forth between 0 and length
-           // object3.localScale = new Vector3(scaleChange, scaleChange, scaleChange);
-            object3.localScale+=new Vector3(0.02f.0.02f,0);
-
+            O3.localScale += new Vector3(2f, 2f, 2f);
         }
     }
 }
 ```
 ### Output:
 
-
-
-
-
-
-
+<img width="1600" height="950" alt="WhatsApp Image 2026-04-28 at 11 36 42 PM" src="https://github.com/user-attachments/assets/ecc023e9-ebf8-4575-81b9-2195a074bd5a" />
 
 ### Result:
 Thus the basic movement is learned through scripting
